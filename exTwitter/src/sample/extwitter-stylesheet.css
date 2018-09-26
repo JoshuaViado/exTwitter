@@ -1,0 +1,129 @@
+.passwordfield {
+	-fx-border-color: #A9CAD8;
+	-fx-border-width: 0px 0px 2px 0px;
+	-fx-text-inner-color: #A9CAD8;
+
+}
+
+.textfield {
+	-fx-text-inner-color: #A9CAD8;
+	-fx-prompt-text-fill: #1F395F;
+}
+
+
+.whiteText {
+	-fx-text-inner-color: #A9CAD8;
+}
+
+.twitterLogo {
+	-fx-opacity: 0.5;
+}
+
+#button:hover {     
+  -fx-background-color : #D4F1FF;
+  -fx-text-fill: white;
+
+}
+
+/*--------------------Scroll-bar-------------------------- */
+
+/*--------------------Horizontaol-Scroll-bar-------------------------- */
+
+.countryImgView {
+	-fx-background-color : #1F395F;
+}
+
+.countryImgView .scroll-bar: horizontal {
+	-fx-background-color: transparent;
+}
+
+.countryImgView .scroll-bar .increment-arrow , .countryImgView .scroll-bar .decrement-arrow {
+	-fx-shape: " ";
+	-fx-padding: 2;
+}
+
+.countryImgView .scroll-bar: horizontal .thumb {
+	-fx-margin: 10;
+	-fx-padding: 2;
+	-fx-background-color : #A9CAD8;
+}
+
+/*--------------------Vertical-Scroll-bar-------------------------- */
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.trendView {
+	-fx-background-color : transparent;
+}
+
+.trendView .scroll-bar: vertical {
+	-fx-background-color: transparent;
+}
+
+.trendView .scroll-bar .increment-arrow , .trendView .scroll-bar .decrement-arrow {
+	-fx-shape: " ";
+	-fx-padding: 2;
+}
+
+.trendView .scroll-bar: vertical .thumb {
+	-fx-margin: 10;
+	-fx-padding: 2;
+	-fx-background-color : #A9CAD8;
+}
+
+/*------------------------------------------------------- */
+
+.drop-shadow {
+	-fx-effect: dropshadow(two-pass-box, #0B1627, 10, 0.5, 0, 0);
+
+}
+
+.flagSelected {
+	-fx-border-color: #A9CAD8;
+	-fx-border-width: 3px 3px 3px 3px;
+
+}
+
+/*------------------------------------------------------- */
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-alternative-row-fill {
+    -fx-fill: #112642;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.axis {
+    -fx-font-size: 1.4em;    
+    -fx-tick-label-fill: #A9CAD8;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 10;
+    -fx-minor-tick-length: 5;
+}
+
+.axis-tick-mark {
+    -fx-stroke: #A9CAD8;
+    -fx-stroke-width: 1; 
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #A9CAD8;
+}
+
+
+/*------------------------------------------------------- */
+
+.progress-bar > .track {
+  -fx-text-box-border: #1F395F;
+  -fx-control-inner-background: #1F395F;
+}

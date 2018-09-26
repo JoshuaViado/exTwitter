@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="850.0" style="-fx-background-color: #1F395F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <right>
+      <VBox prefHeight="410.0" prefWidth="727.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <PasswordField fx:id="oAuthConsumerKeyField" prefHeight="29.0" prefWidth="402.0" promptText="OAuthConsumerKey" style="-fx-background-color: #1F395F;" styleClass="passwordfield" stylesheets="@extwitter-stylesheet.css" />
+            <PasswordField fx:id="oAuthConsumerSecretField" promptText="OAuthConsumerSecret" style="-fx-background-color: #1F395F;" styleClass="passwordfield" stylesheets="@extwitter-stylesheet.css" />
+            <PasswordField fx:id="oAuthAccessTokenField" promptText="OAuthAccessToken" style="-fx-background-color: #1F395F;" styleClass="passwordfield" stylesheets="@extwitter-stylesheet.css" />
+            <PasswordField fx:id="oAuthAccessTokenSecretField" promptText="OAuthAccessTokenSecret" style="-fx-background-color: #1F395F;" styleClass="passwordfield" stylesheets="@extwitter-stylesheet.css" />
+            <HBox prefHeight="34.0" prefWidth="249.0">
+               <children>
+                  <Hyperlink fx:id="helpLink" onAction="#helpAuthenticate" prefHeight="25.0" prefWidth="86.0" text="Need help?" textFill="#a9cad8" />
+                  <Region prefHeight="34.0" prefWidth="101.0" />
+                  <Label fx:id="wrongPassword" prefHeight="26.0" prefWidth="205.0" text="Invalid authentication. Try again." textAlignment="JUSTIFY" textFill="#e44f4f" visible="false" />
+                  <Region prefHeight="34.0" prefWidth="147.0" />
+                  <Button id="button" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="68.0" style="-fx-background-color: #a9cad8;" stylesheets="@extwitter-stylesheet.css" text="\@ccess" textFill="#1f395f">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="30.0" left="20.0" right="20.0" top="70.0" />
+         </padding>
+      </VBox>
+   </right>
+   <top>
+      <Pane prefHeight="20.0" prefWidth="900.0" style="-fx-background-color: #1F395F;" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <Pane prefHeight="392.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="203.0" fitWidth="198.0" layoutY="159.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resource/twitter-noir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+   <bottom>
+      <HBox prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="25.0" prefWidth="235.0" />
+            <Label prefHeight="22.0" prefWidth="107.0" text="#exTwitter" textAlignment="JUSTIFY" textFill="#112642">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </Label>
+            <Region layoutX="10.0" layoutY="25.0" prefHeight="25.0" prefWidth="274.0" />
+            <Label prefHeight="25.0" prefWidth="150.0" text="Created by Joshua Viado" textFill="#112642">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

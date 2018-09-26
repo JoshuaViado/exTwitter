@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #112642;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <VBox prefHeight="661.0" prefWidth="408.0" spacing="7.0" style="-fx-background-color: #1F395F;" styleClass="drop-shadow" stylesheets="@extwitter-stylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="30.0" prefWidth="223.0" text="World Trends" textFill="#a9cad8">
+               <font>
+                  <Font name="Helvetica Neue Light" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="400.0">
+               <children>
+                  <Region prefHeight="28.0" prefWidth="170.0" />
+                  <Label fx:id="trendTitle" prefHeight="23.0" prefWidth="212.0" text=" " textFill="#a9cad8">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="581.0" prefWidth="400.0" styleClass="trendView" stylesheets="@extwitter-stylesheet.css">
+               <content>
+                  <TextFlow fx:id="trend_container" prefHeight="418.0" prefWidth="400.0" style="-fx-background-color: #1F395F;">
+                     <children>
+                        <Region prefHeight="17.0" prefWidth="136.0" />
+                        <Label prefHeight="416.0" prefWidth="173.0" text="Select a Country" textFill="#112642">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Region prefHeight="13.0" prefWidth="82.0" />
+                     </children></TextFlow>
+               </content>
+            </ScrollPane>
+            <ScrollPane prefHeight="284.0" prefWidth="400.0" styleClass="countryImgView" stylesheets="@extwitter-stylesheet.css" vbarPolicy="NEVER">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #1F395F;">
+                     <children>
+                        <ImageView fx:id="ukFlag" fitHeight="150.0" fitWidth="200.0" onMousePressed="#selectFlag" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resource/gb.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#112642" />
+                           </effect></ImageView>
+                        <ImageView fx:id="franceFlag" fitHeight="100.0" fitWidth="250.0" onMousePressed="#selectFlag" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resource/fr.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#112642" />
+                           </effect></ImageView>
+                        <ImageView fx:id="usFlag" fitHeight="100.0" fitWidth="200.0" onMousePressed="#selectFlag" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resource/us.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#112642" />
+                           </effect></ImageView>
+                        <ImageView fx:id="spainFlag" fitHeight="100.0" fitWidth="200.0" onMousePressed="#selectFlag" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resource/es.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#112642" />
+                           </effect></ImageView>
+                        <ImageView fx:id="germanyFlag" fitHeight="100.0" fitWidth="200.0" onMousePressed="#selectFlag" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resource/de.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#112642" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="phFlag" fitHeight="150.0" fitWidth="200.0" onMousePressed="#selectFlag" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resource/ph.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#112642" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets left="15.0" right="7.5" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="661.0" prefWidth="428.0" spacing="7.0" style="-fx-background-color: #1F395F;" styleClass="drop-shadow" stylesheets="@extwitter-stylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="30.0" prefWidth="223.0" text="Search by Location" textFill="#a9cad8">
+               <font>
+                  <Font name="Helvetica Neue Light" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="latField" prefHeight="32.0" prefWidth="387.0" promptText="Latitude" style="-fx-background-color: #112642; -fx-background-radius: 5;" styleClass="textfield" stylesheets="@extwitter-stylesheet.css">
+               <font>
+                  <Font name="Helvetica Neue" size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="longField" prefHeight="32.0" prefWidth="387.0" promptText="Longitude" style="-fx-background-color: #112642; -fx-background-radius: 5;" styleClass="textfield" stylesheets="@extwitter-stylesheet.css">
+               <font>
+                  <Font name="Helvetica Neue" size="17.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="29.0" prefWidth="366.0">
+               <children>
+                  <Hyperlink onAction="#longLangLink" prefHeight="24.0" prefWidth="165.0" text="Get Longitude &amp; Latitude" textFill="#a9cad8">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="13.0" />
+                     </font>
+                  </Hyperlink>
+                  <Region prefHeight="27.0" prefWidth="161.0" />
+                  <Button id="button" fx:id="searchGeoBtn" mnemonicParsing="false" onMousePressed="#searchLocation" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: #A9CAD8;" stylesheets="@extwitter-stylesheet.css" text="Search" />
+               </children>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="369.0">
+               <children>
+                  <Region prefHeight="32.0" prefWidth="141.0" />
+                  <Label fx:id="userLabel" prefHeight="22.0" prefWidth="189.0" text="Users" textFill="#a9cad8" visible="false">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" styleClass="trendView" stylesheets="@extwitter-stylesheet.css">
+               <content>
+                  <TilePane fx:id="profileImageView" hgap="5.0" prefHeight="189.0" prefWidth="398.0" style="-fx-background-color: #1F395F;" vgap="5.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></TilePane>
+               </content>
+            </ScrollPane>
+            <Label fx:id="liveLocationLabel" text="Live Feed" textFill="#a9cad8" visible="false">
+               <font>
+                  <Font name="Helvetica Neue" size="15.0" />
+               </font>
+            </Label>
+            <VBox fx:id="liveLocationFeed" prefHeight="220.0" prefWidth="369.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="7.5" right="15.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+      <VBox prefHeight="661.0" prefWidth="399.0" spacing="7.0" style="-fx-background-color: #1F395F;" styleClass="drop-shadow" stylesheets="@extwitter-stylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="30.0" prefWidth="223.0" text="Search by Keyword" textFill="#a9cad8">
+               <font>
+                  <Font name="Helvetica Neue Light" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="searchKeywordField" onKeyPressed="#searchKeyword" prefHeight="32.0" prefWidth="339.0" promptText="Search Keyword" style="-fx-background-color: #112642; -fx-background-radius: 5;" styleClass="textfield" stylesheets="@extwitter-stylesheet.css">
+               <font>
+                  <Font name="Helvetica Neue" size="17.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="36.0" prefWidth="379.0">
+               <children>
+                  <Region prefHeight="36.0" prefWidth="114.0" />
+                  <Label fx:id="keywordLabel" prefHeight="27.0" prefWidth="83.0" text="Keyword:" textFill="#a9cad8" visible="false">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="keySearched" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="157.0" textFill="#a9cad8">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ProgressBar fx:id="progressTweet" prefHeight="40.0" prefWidth="383.0" progress="0.0" stylesheets="@extwitter-stylesheet.css" visible="false" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="liveTweetTitle" layoutX="44.0" layoutY="10.0" prefHeight="27.0" prefWidth="167.0" text="Live Tweet Count: " textFill="#a9cad8" visible="false">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="liveTweetLabel" prefHeight="27.0" prefWidth="252.0" textFill="#a9cad8">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="24.0" prefWidth="362.0">
+               <children>
+                  <Label fx:id="liveFeedTitle" text="Live Feed" textFill="#a9cad8" visible="false">
+                     <font>
+                        <Font name="Helvetica Neue Light" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="292.0" prefWidth="362.0" styleClass="trendView" stylesheets="@extwitter-stylesheet.css">
+               <content>
+                  <VBox fx:id="liveTweets" prefHeight="289.0" prefWidth="351.0" style="-fx-background-color: #1F395F;" />
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets left="7.5" right="7.5" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="40.0" prefWidth="1250.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="44.0" prefWidth="546.0" />
+            <ImageView fitHeight="46.0" fitWidth="29.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resource/twitter-noir.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="#exTwitter" textFill="#0b1627">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Region prefHeight="44.0" prefWidth="390.0" />
+            <Label text="created by Joshua Viado" textFill="#0b1627">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
